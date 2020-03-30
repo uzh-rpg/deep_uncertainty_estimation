@@ -117,8 +117,8 @@ if args.resume:
     assert os.path.isdir('checkpoint'), 'Error: no checkpoint directory found!'
     
     model_to_load = args.load_model_name.lower()
-    if model_to_load.endswith('adf'):
-        model_to_load = model_to_load[0:-4]
+    # if model_to_load.endswith('adf'):
+    #     model_to_load = model_to_load[0:-4]
     ckpt_path = './checkpoint/ckpt_{}.pth'.format(model_to_load)
     checkpoint = torch.load(ckpt_path)
     if args.verbose: print('Loaded checkpoint at location {}'.format(ckpt_path))
